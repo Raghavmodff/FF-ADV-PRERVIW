@@ -2,8 +2,20 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/ver.php"
+      "destination": "/ver.json"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        }
+      ]
     }
   ]
 }
+
 
